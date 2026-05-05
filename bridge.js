@@ -18,13 +18,16 @@ wss.on('connection', (ws) => {
 
 client.on('messageCreate', (message) => {
     if (message.author.bot) return;
-    const chatString = `${message.author.username}: ${message.content}`;
-    console.log(`Forwarding: ${chatString}`);
-    wss.clients.forEach((mcClient) => {
-        if (mcClient.readyState === WebSocket.OPEN) {
-            mcClient.send(chatString);
-        }
-    });
+
+    // ONLY forward if the channel name is chika-chika
+    if (message.channel.name === 'chika-chika') {
+        const chatString = `${message.author.username}: ${message.content}`;
+        wss.clients.forEach((mcClient) => {
+            if (mcClient.readyState === WebSocket.OPEN) {
+                mcClient.send(chatString);
+            }
+        });
+    }
 });
 
 client.once('ready', () => {
