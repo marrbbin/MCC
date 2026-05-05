@@ -31,4 +31,6 @@ client.once('ready', () => {
     console.log(`🤖 Bot logged in as ${client.user.tag}!`);
 });
 
-client.login('MTUwMTMwMTE5MTA1MTg0MTYyNg.GhTijM.hQODSELpLt3AYjZJRmBRHRCYAh0xx1NqdQNPJk');
+
+// This tells the bot to look for the token in the server's "hidden" settings
+client.login(process.env.DISCORD_TOKEN);
