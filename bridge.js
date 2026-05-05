@@ -31,4 +31,4 @@ client.once('ready', () => {
     console.log(`🤖 Bot logged in as ${client.user.tag}!`);
 });
 
-client.login('MTUwMTMwMTE5MTA1MTg0MTYyNg.GwOKcG.AASTPwEv2cfv8VKzSogJRdfp5-n7VgQ50-O-2E');
+client.login('MTUwMTMwMTE5MTA1MTg0MTYyNg.GhTijM.hQODSELpLt3AYjZJRmBRHRCYAh0xx1NqdQNPJk');
